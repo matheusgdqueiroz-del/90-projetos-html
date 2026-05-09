@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #ecf0f3;
+  min-height: 100vh;
+}
+
+#check{
+  display: none;
+}
+
+
+.btn{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 45px;
+  width: 45px;
+  background: #ecf0f3;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  color: #31344b;
+
+  box-shadow:
+    -3px -3px 7px #ffffff,
+     3px 3px 5px #ceced1;
+
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  box-shadow:
+    inset -3px -3px 7px #ffffff,
+    inset 3px 3px 5px #ceced1;
+}
+
+.btn i{
+  font-size: 18px;
+}
+
+.side_bar{
+  position: fixed;
+  width: 270px;
+  height: 100vh;
+  left: -270px;
+  background: #ecf0f3;
+
+  box-shadow:
+    5px 0 10px rgba(0,0,0,0.1);
+
+  transition: all 0.3s ease;
+}
+
+#check:checked ~ .side_bar{
+  left: 0;
+}
+
+#check:checked ~ .bars{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.side_bar .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 65px;
+  padding: 0 20px;
+
+  box-shadow:
+    -3px -3px 7px #ffffff,
+     3px 3px 5px #ceced1;
+}
+
+.title .logo{
+  font-size: 22px;
+  font-weight: 600;
+  color: #31344b;
+}
+
+.cancel{
+  position: static;
+}
+
+.side_bar ul{
+  margin-top: 20px;
+}
+
+.side_bar ul li{
+  list-style: none;
+  margin: 15px 0;
+}
+
+.side_bar ul li a{
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 15px 25px;
+
+  text-decoration: none;
+  color: #31344b;
+  font-size: 18px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.side_bar ul li a i{
+  margin-right: 15px;
+}
+
+.side_bar ul li a:hover{
+  color: #3498db;
+
+  box-shadow:
+    inset -3px -3px 7px #ffffff,
+    inset 3px 3px 5px #ceced1;
+}
+
+.media_icons{
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.media_icons a{
+  margin: 0 8px;
+
+  height: 40px;
+  width: 40px;
+
+  text-align: center;
+  line-height: 40px;
+
+  border-radius: 50%;
+  color: #31344b;
+  text-decoration: none;
+
+  box-shadow:
+    -3px -3px 7px #ffffff,
+     3px 3px 5px #ceced1;
+
+  transition: all 0.3s ease;
+}
+
+.media_icons a:hover{
+  color: #3498db;
+
+  box-shadow:
+    inset -3px -3px 7px #ffffff,
+    inset 3px 3px 5px #ceced1;
+}
